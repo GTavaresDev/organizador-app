@@ -1,0 +1,17 @@
+<!-- ═══════════ RECEITAS ═══════════ -->
+<div class="page" id="page-receitas">
+  <div class="g g4 mb14">
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--green)"></div><div class="kpi-label">Total Recebido</div><div class="kpi-val tg" id="r-rec">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--amber)"></div><div class="kpi-label">Pendente</div><div class="kpi-val ta" id="r-pend">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--blue)"></div><div class="kpi-label">Total Geral</div><div class="kpi-val tb" id="r-total">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--purple)"></div><div class="kpi-label">Lançamentos</div><div class="kpi-val tp" id="r-count">0</div></div>
+  </div>
+  <div class="g g2 mb14">
+    <div class="card"><div class="sec-head"><div class="sec-title">Evolução</div></div><div class="ch-wrap" style="height:190px"><canvas id="cRecLine" role="img" aria-label="Evolução de receitas"></canvas></div></div>
+    <div class="card"><div class="sec-head"><div class="sec-title">Por Categoria</div></div><div class="ch-wrap" style="height:190px"><canvas id="cRecCat" role="img" aria-label="Receitas por categoria"></canvas></div></div>
+  </div>
+  <div class="card">
+    <div class="sec-head"><div class="sec-title">Lançamentos</div><button class="topbar-btn btn-primary" onclick="openAddModal('receita')">+ Nova Receita</button></div>
+    <div id="tbl-receitas"></div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<!-- ═══════════ GASTOS ═══════════ -->
+<div class="page" id="page-gastos">
+  <div class="g g4 mb14">
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--red)"></div><div class="kpi-label">Total Pago</div><div class="kpi-val tr" id="g-pago">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--amber)"></div><div class="kpi-label">Pendentes</div><div class="kpi-val ta" id="g-pend">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--red)"></div><div class="kpi-label">Maior Gasto</div><div class="kpi-val tr" id="g-max">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--muted)"></div><div class="kpi-label">Despesas</div><div class="kpi-val tm" id="g-count">0</div></div>
+  </div>
+  <div class="g g21 mb14">
+    <div class="card"><div class="sec-head"><div class="sec-title">Por Categoria</div></div><div class="ch-wrap" style="height:210px"><canvas id="cGasBars" role="img" aria-label="Gastos por categoria"></canvas></div></div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">Por Prioridade</div></div>
+      <div id="g-prio-bars"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="sec-head"><div class="sec-title">Despesas</div><button class="topbar-btn btn-primary" onclick="openAddModal('gasto')">+ Novo Gasto</button></div>
+    <div id="tbl-gastos"></div>
+  </div>
+</div>

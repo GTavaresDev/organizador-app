@@ -1,0 +1,10 @@
+/* INV ITEM */
+.inv-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
+.inv-item:last-child{border-bottom:none;}
+.inv-dot{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.inv-info{flex:1;}
+.inv-name{font-size:13px;font-weight:500;}
+.inv-type{font-size:11px;color:var(--muted);margin-top:2px;}
+.inv-right{text-align:right;}
+.inv-val{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;}
+.inv-ret{font-size:11px;margin-top:2px;}

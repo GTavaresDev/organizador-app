@@ -1,0 +1,8 @@
+/* CREDIT CARD */
+.cc{border-radius:14px;padding:20px;position:relative;overflow:hidden;min-height:155px;display:flex;flex-direction:column;justify-content:space-between;}
+.cc::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.03);}
+.cc::after{content:'';position:absolute;bottom:-30px;left:10px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.02);}
+.cc-bank{font-size:10px;text-transform:uppercase;letter-spacing:.1em;opacity:.6;}
+.cc-name{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-top:3px;}
+.cc-num{font-size:12px;opacity:.5;margin-top:14px;letter-spacing:.08em;}
+.cc-meta{display:flex;justify-content:space-between;font-size:10.5px;opacity:.55;margin-top:10px;}

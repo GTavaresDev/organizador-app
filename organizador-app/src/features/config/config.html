@@ -1,0 +1,77 @@
+<!-- ═══════════ CONFIGURAÇÕES ═══════════ -->
+<div class="page" id="page-config">
+  <div class="g g2" style="align-items:start">
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">👤 Perfil</div></div>
+      <div class="setting-row">
+        <div><div class="setting-label">Nome</div><div class="setting-desc">Exibido no dashboard e no avatar</div></div>
+        <div class="setting-ctrl">
+          <input class="finput" style="width:180px" id="cfg-nome" placeholder="Seu nome" oninput="applyConfig()" onblur="validarNomeAoSair()">
+        </div>
+      </div>
+      <div class="setting-row">
+        <div><div class="setting-label">Iniciais do Avatar</div><div class="setting-desc">2-3 letras exibidas no avatar</div></div>
+        <div class="setting-ctrl">
+          <input class="finput" style="width:80px" id="cfg-iniciais" maxlength="3" placeholder="JS" oninput="applyConfig()">
+        </div>
+      </div>
+      <div class="setting-row">
+        <div><div class="setting-label">Moeda</div><div class="setting-desc">Símbolo usado nos valores</div></div>
+        <div class="setting-ctrl">
+          <select class="finput" style="width:120px" id="cfg-moeda" onchange="applyConfig()">
+            <option value="R$">R$ – Real</option>
+            <option value="$">$ – Dólar</option>
+            <option value="€">€ – Euro</option>
+            <option value="£">£ – Libra</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">💰 Finanças</div></div>
+      <div class="setting-row">
+        <div><div class="setting-label">Orçamento Mensal</div><div class="setting-desc">Limite de gastos por mês</div></div>
+        <div class="setting-ctrl">
+          <input class="finput" style="width:140px" type="number" id="cfg-orcamento" placeholder="5000" oninput="applyConfig()">
+        </div>
+      </div>
+      <div class="setting-row">
+        <div><div class="setting-label">Meta de Economia</div><div class="setting-desc">% da renda a economizar</div></div>
+        <div class="setting-ctrl">
+          <input class="finput" style="width:80px" type="number" id="cfg-meta-eco" placeholder="20" min="0" max="100" oninput="applyConfig()">
+          <span class="tm">%</span>
+        </div>
+      </div>
+      <div class="setting-row">
+        <div><div class="setting-label">Cor de Destaque</div><div class="setting-desc">Cor principal do app</div></div>
+        <div class="setting-ctrl" id="color-opts">
+          <div onclick="setAccent('#00e5a0',this)" style="width:24px;height:24px;border-radius:50%;background:#00e5a0;cursor:pointer;border:2px solid #fff"></div>
+          <div onclick="setAccent('#4d8aff',this)" style="width:24px;height:24px;border-radius:50%;background:#4d8aff;cursor:pointer;border:2px solid transparent"></div>
+          <div onclick="setAccent('#a07dff',this)" style="width:24px;height:24px;border-radius:50%;background:#a07dff;cursor:pointer;border:2px solid transparent"></div>
+          <div onclick="setAccent('#ff4d6d',this)" style="width:24px;height:24px;border-radius:50%;background:#ff4d6d;cursor:pointer;border:2px solid transparent"></div>
+          <div onclick="setAccent('#ffb84c',this)" style="width:24px;height:24px;border-radius:50%;background:#ffb84c;cursor:pointer;border:2px solid transparent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mt14">
+    <div class="sec-head"><div class="sec-title">🗂️ Dados</div></div>
+    <div class="setting-row">
+      <div><div class="setting-label">Exportar Dados (JSON)</div><div class="setting-desc">Baixe um backup de todos os seus dados</div></div>
+      <button class="topbar-btn btn-ghost" onclick="exportData()">⬇ Exportar</button>
+    </div>
+    <div class="setting-row">
+      <div><div class="setting-label">Importar Dados (JSON)</div><div class="setting-desc">Restaure um backup anterior</div></div>
+      <label class="topbar-btn btn-ghost" style="cursor:pointer">⬆ Importar<input type="file" accept=".json" style="display:none" onchange="importData(event)"></label>
+    </div>
+    <div class="setting-row">
+      <div><div class="setting-label" style="color:var(--red)">Apagar Todos os Dados</div><div class="setting-desc">Remove todos os lançamentos permanentemente</div></div>
+      <button class="topbar-btn btn-danger" onclick="clearAllData()">🗑 Apagar Tudo</button>
+    </div>
+  </div>
+  <div class="card mt14">
+    <div class="sec-head"><div class="sec-title">ℹ️ Sobre</div></div>
+    <div class="setting-row"><div class="setting-label">OrganizaApp+</div><div class="setting-desc">Dashboard Financeiro Pessoal • v2.0</div></div>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Todos os dados são salvos localmente no seu navegador (localStorage). Nenhum dado é enviado para servidores externos.</p>
+  </div>
+</div>

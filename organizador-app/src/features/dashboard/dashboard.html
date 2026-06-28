@@ -1,0 +1,52 @@
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<div class="page active" id="page-dashboard">
+  <div class="g g4 mb14">
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--green)"></div><div class="kpi-label">💰 Saldo Disponível</div><div class="kpi-val tg" id="d-saldo">R$ 0,00</div><div class="kpi-sub"><span class="pill pill-g" id="d-saldo-pct">0%</span><span>vs mês anterior</span></div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--blue)"></div><div class="kpi-label">📈 Receitas do Mês</div><div class="kpi-val tb" id="d-rec">R$ 0,00</div><div class="kpi-sub"><span class="pill pill-b" id="d-rec-pct">0%</span></div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--red)"></div><div class="kpi-label">📉 Despesas do Mês</div><div class="kpi-val tr" id="d-desp">R$ 0,00</div><div class="kpi-sub"><span class="pill pill-r" id="d-desp-pct">0%</span></div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--purple)"></div><div class="kpi-label">💼 Total Investido</div><div class="kpi-val tp" id="d-inv">R$ 0,00</div><div class="kpi-sub"><span class="pill pill-p">acumulado</span></div></div>
+  </div>
+  <div class="g g4 mb14">
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--cyan)"></div><div class="kpi-label">🏦 Economia do Mês</div><div class="kpi-val tc" id="d-eco">R$ 0,00</div><div class="kpi-sub"><span class="pill pill-c" id="d-eco-pct">0%</span><span>da renda</span></div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--amber)"></div><div class="kpi-label">🔐 Reserva Emerg.</div><div class="kpi-val ta" id="d-res">R$ 0,00</div><div class="kpi-sub" id="d-res-sub"></div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--red)"></div><div class="kpi-label">⚠️ Contas Pendentes</div><div class="kpi-val tr" id="d-pend">0</div><div class="kpi-sub tm">despesas pendentes</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--green)"></div><div class="kpi-label">❤️ Saúde Financeira</div><div class="kpi-val tg" id="d-saude">–</div><div class="hdots" id="d-hdots"></div></div>
+  </div>
+  <div class="g g21 mb14">
+    <div class="card">
+      <div class="sec-head"><div><div class="sec-title">Receitas vs Despesas</div><div class="sec-sub">Últimos 6 meses</div></div><span class="pill pill-g" id="d-eco-pill">economia</span></div>
+      <div class="ch-wrap" style="height:220px"><canvas id="cRecDesp" role="img" aria-label="Receitas vs despesas últimos 6 meses"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">Gastos por Categoria</div></div>
+      <div class="ch-wrap" style="height:220px"><canvas id="cPizza" role="img" aria-label="Gastos por categoria"></canvas></div>
+    </div>
+  </div>
+  <div class="g g2 mb14">
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">💡 Quanto Posso Gastar</div></div>
+      <div class="orc-bar">
+        <div class="orc-row"><span class="orc-lbl">Orçamento mensal</span><span class="orc-val tg" id="d-orc-total">R$ 0,00</span></div>
+        <div class="orc-row"><span class="orc-lbl">Gasto até agora</span><span class="orc-val tr" id="d-orc-gasto">R$ 0,00</span></div>
+        <div class="orc-row"><span class="orc-lbl">Disponível</span><span class="orc-val tc" id="d-orc-disp">R$ 0,00</span></div>
+        <div class="prog-bar mt8"><div class="prog-fill" id="d-orc-bar" style="width:0%"></div></div>
+        <div class="orc-status" id="d-orc-status"><div class="sdot" id="d-orc-dot"></div><span id="d-orc-msg"></span></div>
+      </div>
+      <div style="margin-top:12px;font-size:12px;color:var(--muted)">Edite o orçamento em <span class="tg" style="cursor:pointer" onclick="goToConfig()">Configurações</span></div>
+    </div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">🚦 Alertas</div></div>
+      <div id="d-alertas"><div class="empty"><div class="empty-ico">✅</div><div class="empty-txt">Nenhum alerta no momento!</div></div></div>
+    </div>
+  </div>
+  <div class="g g32">
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">🏆 Maiores Gastos</div></div>
+      <div id="d-rank"><div class="empty"><div class="empty-ico">📊</div><div class="empty-txt">Adicione gastos para ver o ranking</div></div></div>
+    </div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">📊 Distribuição</div></div>
+      <div id="d-bars"></div>
+    </div>
+  </div>
+</div>

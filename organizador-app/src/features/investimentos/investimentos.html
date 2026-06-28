@@ -1,0 +1,17 @@
+<!-- ═══════════ INVESTIMENTOS ═══════════ -->
+<div class="page" id="page-investimentos">
+  <div class="g g4 mb14">
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--purple)"></div><div class="kpi-label">Total Investido</div><div class="kpi-val tp" id="i-total">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--blue)"></div><div class="kpi-label">Reserva Emerg.</div><div class="kpi-val tb" id="i-res">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--green)"></div><div class="kpi-label">Rend. Estimado/mês</div><div class="kpi-val tg" id="i-rend">R$ 0,00</div></div>
+    <div class="card kpi"><div class="kpi-accent" style="background:var(--amber)"></div><div class="kpi-label">Ativos</div><div class="kpi-val ta" id="i-count">0</div></div>
+  </div>
+  <div class="g g2 mb14">
+    <div class="card"><div class="sec-head"><div class="sec-title">Evolução Patrimonial</div></div><div class="ch-wrap" style="height:210px"><canvas id="cPatrimonio" role="img" aria-label="Evolução patrimonial"></canvas></div></div>
+    <div class="card"><div class="sec-head"><div class="sec-title">Distribuição</div></div><div class="ch-wrap" style="height:210px"><canvas id="cCarteira" role="img" aria-label="Distribuição da carteira"></canvas></div></div>
+  </div>
+  <div class="card">
+    <div class="sec-head"><div class="sec-title">Meus Ativos</div><button class="topbar-btn btn-primary" onclick="openAddModal('investimento')">+ Novo Ativo</button></div>
+    <div id="list-inv"></div>
+  </div>
+</div>

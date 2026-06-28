@@ -1,0 +1,30 @@
+<!-- ═══════════ SIMULAÇÃO ═══════════ -->
+<div class="page" id="page-simulacao">
+  <div class="g g21" style="align-items:start">
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">🧮 Simulador de Juros Compostos</div></div>
+      <div class="form-grid">
+        <div class="fg"><label class="flabel">Capital Inicial (R$)</label><input class="finput" type="number" id="simCap" value="1000" min="0" oninput="calcSim()"></div>
+        <div class="fg"><label class="flabel">Aporte Mensal (R$)</label><input class="finput" type="number" id="simAp" value="500" min="0" oninput="calcSim()"></div>
+        <div class="fg"><label class="flabel">Taxa ao Mês (%)</label><input class="finput" type="number" id="simTaxa" value="0.8" step="0.1" oninput="calcSim()"></div>
+        <div class="fg"><label class="flabel">Período (meses)</label><input class="finput" type="number" id="simMeses" value="24" min="1" max="600" oninput="calcSim()"></div>
+      </div>
+      <div class="g g3" style="gap:10px;margin-top:4px">
+        <div class="card-sm" style="text-align:center"><div class="kpi-label">Total Aportado</div><div class="kpi-val tb fs-sim" id="sAp">–</div></div>
+        <div class="card-sm" style="text-align:center"><div class="kpi-label">Patrimônio Final</div><div class="kpi-val tg fs-sim" id="sPat">–</div></div>
+        <div class="card-sm" style="text-align:center"><div class="kpi-label">Rendimento</div><div class="kpi-val tp fs-sim" id="sRend">–</div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="sec-title mb8" style="font-size:13px;margin-bottom:8px">Cenários (24 meses)</div>
+      <div class="g g3" style="gap:10px">
+        <div class="card-sm" style="text-align:center;border-color:rgba(77,138,255,.2)"><div class="kpi-label">🔵 Conservador</div><div style="font-size:11px;color:var(--muted);margin-bottom:6px">0,6% a.m.</div><div class="font-syne fw7 tb" id="sCons">–</div></div>
+        <div class="card-sm" style="text-align:center;border-color:rgba(0,229,160,.2)"><div class="kpi-label">🟢 Moderado</div><div style="font-size:11px;color:var(--muted);margin-bottom:6px">0,9% a.m.</div><div class="font-syne fw7 tg" id="sMod">–</div></div>
+        <div class="card-sm" style="text-align:center;border-color:rgba(160,125,255,.2)"><div class="kpi-label">🟣 Agressivo</div><div style="font-size:11px;color:var(--muted);margin-bottom:6px">1,5% a.m.</div><div class="font-syne fw7 tp" id="sAgr">–</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="sec-head"><div class="sec-title">Projeção</div></div>
+      <div class="ch-wrap" style="height:290px"><canvas id="cSim" role="img" aria-label="Projeção de crescimento do investimento"></canvas></div>
+    </div>
+  </div>
+</div>
